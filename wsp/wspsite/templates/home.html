@@ -1,0 +1,81 @@
+{% load django_bootstrap5 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        window.onload = function() {
+          var path = window.location.pathname;
+          var page = path.split("/").pop();
+
+          var navElements = document.querySelectorAll('.nav-link');
+
+          for (var i = 0; i < navElements.length; i++) {
+              var navItem = navElements[i];
+              var link = navItem.getAttribute('href');
+
+              if (link.indexOf(page) !== -1) {
+                  navItem.classList.add('active');
+              }
+          }
+      }
+      });
+  </script>
+  <style>
+    .bg-home {
+      background-image: url("{% static 'images/home_hero.jpg' %}");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .text-inverted {
+      filter: invert(1) grayscale(100%) brightness(200%);
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white;
+    background-color: green;
+}
+  }
+  </style>
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png" />
+</head>
+<body>
+    <!-- Include your header content here -->
+    <header>
+        {% include 'partials/header.html' %}
+    </header>
+
+    <!-- Include your main content here -->
+  <main class="px-0" height="90vh">
+    {% block content %}
+        <div class="px-4 py-5 my-5 text-center bg-home" width="150px">
+          {% load static %}
+            <h1 class="display-5 fw-bold text-body-emphasis text-inverted">Centered hero</h1>
+            <div class="col-lg-6 mx-auto text-inverted">
+              <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Order Now</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">More Info</button>
+              </div>
+            </div>
+          </div>
+
+    {% endblock %}
+    
+  </main>
+
+    <!-- Include your footer content here -->
+    <footer>
+        {% include 'partials/footer.html' %}
+    </footer>
+
+</body>
+</html>
