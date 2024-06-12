@@ -1,26 +1,24 @@
 <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-3">
         <a href="/" class="d-flex align-items-left mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
           {% load static %}
           <img class="d-block mx-auto mb-4" src="{% static 'images/logo.png' %}" alt="" width="250px">
         </a>
       </div>
-      <div class="col">
-          <ul class="nav nav-pills">
+      <div class="col-9">
+          <ul class="nav nav-pills justify-content-end">
             <li class="nav-item"><a href="home" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="productinfo" class="nav-link">Product Information</a></li>
             <li class="nav-item"><a href="pricing" class="nav-link">Pricing</a></li>
             <li class="nav-item"><a href="faqs" class="nav-link">FAQs</a></li>
             <li class="nav-item"><a href="about" class="nav-link">About</a></li>
           </ul>
-          <div class="social-buttons">
-            <a class="btn btn-social btn-bitbucket"><i class="fa fa-bitbucket"></i></a>
-            <a class="btn btn-social btn-dropbox"><i class="fa fa-dropbox"></i></a>
-            <a class="btn btn-social btn-facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a class="btn btn-social btn-flickr"><i class="fa fa-flickr"></i></a>
+          {% load static %}
+          <div class="d-flex justify-content-end">
+              <img src="{% static 'images/social.png' %}" alt="" width="250px">
           </div>
-    </div>
+      </div>
 </div>
   </header>

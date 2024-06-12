@@ -1,84 +1,100 @@
-{% extends "home.html" %}
-{% block content %}
+{% extends "home.html" %} {% block content %}
 <section>
-    <main>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-          <div class="col-md-12">
-            <h1 class="display-4 fw-normal">About Company</h1>
-            <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-            <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-          </div>
-          <div class="product-device shadow-sm d-none d-md-block"></div>
-          <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  <main>
+    <div
+      class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light"
+    >
+      <div class="col-md-12">
+        <h1 class="display-4 fw-normal">Welcome to “XThirst”</h1>
+        <p class="lead fw-normal">
+          At XThirst, we believe that every sip should be an escape to
+          sun-kissed beaches, even if you’re just lounging on your couch. Our
+          watermelon-infused hard seltzers are the ultimate ode to summer,
+          blending the juiciness of real watermelons with the effervescence of
+          pure refreshment. Dive in and discover the taste of endless summer in
+          every can.
+        </p>
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div
+        class="product-device product-device-2 shadow-sm d-none d-md-block"
+      ></div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+      <div
+        class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"
+      >
+        <div class="my-3 py-3">
+          <h2 class="display-5">Why XThirst?</h2>
+          <p class="fs-5">
+            Crafted with Love: Our master brewers handpick the ripest
+            watermelons, capturing their essence in every batch. Each can is a
+            labor of love, infused with the spirit of sun-soaked afternoons.
+          </p>
+          <p class="fs-5">
+            Authentic Flavor: No shortcuts here! We’ve perfected the delicate
+            balance of sweet and refreshing watermelon flavor. Close your eyes,
+            take a sip, and let the waves of nostalgia wash over you.
+          </p>
+          <p class="fs-5">
+            Zero Guilt, All Pleasure: With only 100 calories per can and zero
+            added sugar, XThirst lets you indulge guilt-free. It’s like a
+            guilt-free beach vacation—minus the sand in your shoes.
+          </p>
         </div>
-      
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-          <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
-          <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div
+        class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+      >
+        <div class="my-3 p-3">
+          <h2 class="display-5">Our Seltzer Lineup:</h2>
+          <p class="fs-4">
+            <strong>Watermelon Seltzer Drink:</strong> The OG. Bursting with
+            juicy watermelon goodness, it’s like biting into a slice of summer.
+            Perfect for lazy picnics, rooftop parties, or simply because life
+            deserves a refreshing twist. 🍉☀️
+          </p>
+          <p class="fs-4">
+            <strong>Tropical Splash:</strong> Watermelon meets pineapple, with a
+            hint of coconut. Close your eyes, and suddenly you’re sipping under
+            a palm tree. 🌴🍍🥥
+          </p>
+          <p class="fs-4">
+            <strong>Sunset Serenade:</strong> Watermelon blended with blood
+            orange—because sunsets taste better with a citrus twist. Share it
+            with friends or keep it all to yourself; we won’t judge. 🌅🍊
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 my-md-3 ps-md-3">
+      <div
+        class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+      >
+        <div class="my-3 py-3">
+          <h2 class="display-5">Join the XThirst Community:</h2>
+
+          Follow us on social media: {% load static %}
+          <div class="d-flex justify-content-center">
+            <img src="{% static 'images/social.png' %}" alt="" width="250px" />
           </div>
         </div>
-      
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-          <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
-          <div class="bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
+      </div>
+    </div>
+    <div class="w-100 my-md-3 ps-md-3">
+      <div
+        class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+      >
+        <div class="my-3 py-3">
+          <h2 class="display-5">Where to Find Us:</h2>
+          <p class="h5">
+            XThirst Seltzers are available at your local beachside bodega,
+            surf shops, and select rooftop bars.
+          </p>
         </div>
-      
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-          <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
-          <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
-        </div>
-      
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-          <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
-          <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">Another headline</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
-        </div>
-      </main>
-{% endblock %}
+      </div>
+    </div>
+  </main>
+  {% endblock %}
 </section>

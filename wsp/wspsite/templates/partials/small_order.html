@@ -1,0 +1,18 @@
+{% extends "home.html" %} {% block content %}{% load crispy_forms_tags %}
+<section>
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Small Business Order Form</h1>
+    <p class="fs-5 text-muted">
+      Use this form to order up to 12 cases of our product. We will contact you. Thank you for your business.
+    </p>
+  </div>
+  <div class="container justify-content-center">
+    {% csrf_token %}
+    {% crispy form %}
+    <script>
+      document.getElementById("id_cases").min = 13;
+      document.getElementById("id_cases").max = 25;
+    </script>
+  </div>
+</section>
+{% endblock %}

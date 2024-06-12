@@ -26,7 +26,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'wspsite',
     'pwa',
-    'django_bootstrap5'
+    'django_bootstrap5',
+    'fontawesomefree',
+    'crispy_forms',
+    "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -40,6 +43,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'wsp.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

@@ -1,0 +1,25 @@
+{% extends "home.html" %} {% block content %} {% load crispy_forms_tags %}
+<section>
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Thank You! for you order</h1>
+    <div class="alert alert-success" role="alert">
+      <p class="fs-5">Success! We received your order.</p>
+    </div>
+    <div class="card w-100 text-left px-5" style="width: 18rem;">
+        <div class="card-img-top bg-home" style="height: 150px"></div>
+        <div class="card-body w-50">
+          <h3 class="card-title">Order Details</h3>
+          <p class="card-text">
+            <ul class="list-group list-group-flush">
+            {% for field, value in entOrderData.items %}
+                {% if not forloop.last %}
+                    <li class="list-group-item text-left" style="text-align: left;"><strong>{{ field|capfirst }}</strong>: {{ value }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+          </p>
+        </div>
+      </div>
+  </div>
+</section>
+{% endblock %}
